@@ -11,11 +11,6 @@ followers = db.Table('followers',
                     db.Column('followed_id', db.Integer, db.ForeignKey('user.id'))
                     )
 
-@login.user_loader
-def load_user(id):
-    return User.query.get(int(id))
-
-
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
@@ -61,6 +56,10 @@ class User(UserMixin, db.Model):
             followers.c.follower_id == self.id)
         own = Post.query.filter_by(user_id=self.id)
         return followed.union(own).order_by(Post.timestamp.desc())
+
+@login.user_loader
+def load_user(id):
+    return User.query.get(int(id))
 
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
