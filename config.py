@@ -14,3 +14,4 @@ class Config:
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     ADMINS = ['sfp10g@yandex.ru']
     POSTS_PER_PAGE = 3
+    LANGUAGES = ['en', 'ru']
