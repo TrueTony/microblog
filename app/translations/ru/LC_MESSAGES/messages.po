@@ -1,0 +1,164 @@
+# Russian translations for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-05-22 17:50+0300\n"
+"PO-Revision-Date: 2018-05-22 18:25+0300\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.0.7\n"
+
+#: app/email.py:22
+msgid "[Microblog] Reset Your Password"
+msgstr ""
+
+#: app/forms.py:12 app/forms.py:19 app/forms.py:50
+msgid "Username"
+msgstr "Пользователь"
+
+#: app/forms.py:13 app/forms.py:21 app/forms.py:43
+msgid "Password"
+msgstr "Пароль"
+
+#: app/forms.py:14
+msgid "Remember Me"
+msgstr "Запомнить меня"
+
+#: app/forms.py:15 app/routes.py:80
+msgid "Sing In"
+msgstr "Войти"
+
+#: app/forms.py:20 app/forms.py:38
+msgid "Email"
+msgstr "Email"
+
+#: app/forms.py:22 app/forms.py:45
+msgid "Repeat Password"
+msgstr "Повторите пароль"
+
+#: app/forms.py:24 app/routes.py:101
+msgid "Register"
+msgstr "Регистрация"
+
+#: app/forms.py:29
+msgid "Please use a different username"
+msgstr "Пожалуйста, выберите другое имя"
+
+#: app/forms.py:34
+msgid "Please use a different email address"
+msgstr "Пожалуйста, выберите другой email"
+
+#: app/forms.py:39 app/forms.py:46
+msgid "Request Password Reset"
+msgstr "Запросить сброс пароля"
+
+#: app/forms.py:51
+msgid "About me"
+msgstr "Обо мне"
+
+#: app/forms.py:52 app/forms.py:68
+msgid "Submit"
+msgstr "Подтвердить"
+
+#: app/forms.py:62
+msgid "Please use a different name"
+msgstr "Пожалуйста, используйте другое имя"
+
+#: app/forms.py:66
+msgid "Say something"
+msgstr "Скажите что-нибудь"
+
+#: app/routes.py:38
+msgid "Your post in low live!"
+msgstr "Твой пост в теме!"
+
+#: app/routes.py:47
+msgid "Home"
+msgstr "Домой"
+
+#: app/routes.py:61
+msgid "Explore"
+msgstr "Исследовать"
+
+#: app/routes.py:73
+msgid "Invalid username or password"
+msgstr "Неправильное имя или пароль"
+
+#: app/routes.py:99
+msgid "Congratulations, you are noew a register user!"
+msgstr "Поздравляем, вы теперь зарегистрированный пользователь!"
+
+#: app/routes.py:127
+msgid "Your changes have been saved"
+msgstr "Ваши изменения сохранены"
+
+#: app/routes.py:132
+msgid "Edit Profile"
+msgstr "Изменить профиль"
+
+#: app/routes.py:139 app/routes.py:154
+#, python-format
+msgid "User %(username)s not found"
+msgstr "Пользователь %(username)s не найдет"
+
+#: app/routes.py:142
+msgid "You cannot follow yourself"
+msgstr "Вы не можете подписаться на себя"
+
+#: app/routes.py:146
+#, python-format
+msgid "You are following %(username)s!"
+msgstr "Теперь вы подписаны на %(username)s!"
+
+#: app/routes.py:157
+msgid "You cannot unfollow yourself"
+msgstr "Вы не можете отписаться от себя"
+
+#: app/routes.py:161
+#, python-format
+msgid "You are unfollow %(username)s"
+msgstr "Вы отписаны от %(username)s"
+
+#: app/routes.py:174
+msgid "Chek your email for the instruction to reset your password"
+msgstr "Провертье вашу почту для инструкции о сбросе пароля"
+
+#: app/routes.py:177
+msgid "Reset Password"
+msgstr "Сбросить пароль"
+
+#: app/routes.py:191
+msgid "Your password has veen reset."
+msgstr "Ваш пароль был сброшен."
+
+#: app/templates/user.html:13
+msgid "Edit your profile"
+msgstr "Изменить ваш профиль"
+
+#: app/templates/user.html:15
+msgid "Follow"
+msgstr "Подписаться"
+
+#: app/templates/user.html:17
+msgid "Unfollow"
+msgstr "Описаться"
+
+#: app/templates/user.html:29
+msgid "Newer posts"
+msgstr "Новейшие посты"
+
+#: app/templates/user.html:34
+msgid "Older posts"
+msgstr "Старейшие посты"
