@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect, url_for
+from flask import render_template, flash, redirect, url_for, jsonify
 from app import app
 from app.forms import LoginForm
 from flask_login import current_user, login_user
@@ -20,6 +20,7 @@ from flask_babel import _
 from flask import g
 from flask_babel import get_locale
 from guess_language import guess_language
+from app.translate import translate
 
 
 @app.before_request
@@ -200,8 +201,9 @@ def reset_password(token):
     return render_template('reset_password.html', form=form)
 
 
-
-
-
-
-
+@app.route('/translate', methods=['POST'])
+@login_required
+def translate_text():
+    return jsonify({'text': translate(request.form['text'],
+    request.form['source_language'],
+    request.form['dest_language'])})
