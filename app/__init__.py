@@ -16,7 +16,7 @@ db = SQLAlchemy()
 migrate = Migrate()
 login = LoginManager()
 login.login_view = 'auth.login'
-login.logim_message = _l('Please log in to acces this page')
+login.login_message = _l('Please log in to acces this page')
 mail = Mail()
 bootstrap = Bootstrap()
 moment = Moment()
@@ -40,6 +40,9 @@ def create_app(config_class=Config):
 
     from app.auth import bp as auth_bp
     app.register_blueprint(auth_bp, url_prefix='/auth')
+
+    from app.main import bp as main_bp
+    app.register_blueprint(main_bp)
 
     if not app.debug and not app.testing:
         if app.config['MAIL_SERVER']:
