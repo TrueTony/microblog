@@ -20,3 +20,4 @@ class Config:
     ADMINS = ['sfp10g@yandex.ru']
     POSTS_PER_PAGE = 3
     LANGUAGES = ['en', 'ru']
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
