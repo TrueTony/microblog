@@ -7,7 +7,7 @@ def add_to_index(index, model):
     playload = {}
     for field in model.__searchable__:
         playload[field] = getattr(model, field)
-    current_app.elasticsearch.index(index=index, doc_type=index, db=model.id,
+    current_app.elasticsearch.index(index=index, doc_type=index, id=model.id,
                                     body=payload)
 
 def remove_from_index(index, model):
