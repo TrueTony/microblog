@@ -4,9 +4,9 @@ from flask import current_app
 def add_to_index(index, model):
     if not current_app.elasticsearch:
         return
-    playload = {}
+    payload = {}
     for field in model.__searchable__:
-        playload[field] = getattr(model, field)
+        payload[field] = getattr(model, field)
     current_app.elasticsearch.index(index=index, doc_type=index, id=model.id,
                                     body=payload)
 
