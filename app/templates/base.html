@@ -76,6 +76,26 @@
                 $(destElem).text("{{ _('Error: Could not connect server') }}");
             });
         }
+        $(function() {
+            $('.user_popup').hover(
+                function(event) {
+                    // mouse in event handler
+                    var elem = event.currentTarget;
+                    timer = setTimeout(function() {
+                        timer = null;
+                        // логина popup должна быть здесь
+                    }, 1000);
+                },
+                function(event) {
+                    // mouse out event handler
+                    var elem = event.currentTarget;
+                    if (timer) {
+                        clearTmeout(timer);
+                        timer = null;
+                    }
+                }
+            )
+        });
     </script>
 {% endblock %}
 
