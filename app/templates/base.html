@@ -82,7 +82,7 @@
             $('.user_popup').hover(
                 function(event) {
                     // mouse in event handler
-                    var elem = event.currentTarget;
+                    var elem = $(event.currentTarget);
                     timer = setTimeout(function() {
                         timer = null;
                         xhr = $.ajax(
@@ -98,12 +98,12 @@
                                 }).popover('show');
                                 flask_moment_render_all();
                             }
-                        };
+                        );
                     }, 1000);
                 },
                 function(event) {
                     // mouse out event handler
-                    var elem = event.currentTarget;
+                    var elem = $(event.currentTarget);
                     if (timer) {
                         clearTimeout(timer);
                         timer = null;
@@ -116,7 +116,7 @@
                         elem.popover('destroy');
                     }
                 }
-            )
+            );
         });
     </script>
 {% endblock %}
