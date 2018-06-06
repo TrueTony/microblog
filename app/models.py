@@ -70,7 +70,6 @@ class User(UserMixin, db.Model):
         primaryjoin=(followers.c.follower_id == id),
         secondaryjoin=(followers.c.followed_id == id),
         backref=db.backref('followers', lazy='dynamic'), lazy='dynamic')
-
     messages_sent = db.relationship('Message',
                                     foreign_keys='Message.sender_id',
                                     backref='author', lazy='dynamic')
@@ -79,7 +78,7 @@ class User(UserMixin, db.Model):
                                         backref='recipient', lazy='dynamic')
     last_message_read_time = db.Column(db.DateTime)
     notifications = db.relationship('Notification', backref='user',
-                                   lazy='dynamic')
+                                    lazy='dynamic')
 
     def __repr__(self):
         return '<User {}>'.format(self.username)
@@ -134,7 +133,7 @@ class User(UserMixin, db.Model):
         return Message.query.filter_by(recipient=self).filter(
             Message.timestamp > last_read_time).count()
 
-    def add_notifications(self, name, data):
+    def add_notification(self, name, data):
         self.notifications.filter_by(name=name).delete()
         n = Notification(name=name, payload_json=json.dumps(data), user=self)
         db.session.add(n)
